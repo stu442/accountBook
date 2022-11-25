@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Account book</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="background" class="flex_center">
+        <div id="big_container" class="box">
+            <div id="top_box" class="box">
+                <img src="img/left_arrows.png" id="left_arrow" />
+                <div id="top_box_contents" class="flex_center">
+                    <span>11월 소비</span>
+                    <span id="top_box_number"></span>
+                </div>
+                <img src="img/right_arrows.png" id="right_arrow" />
+            </div>
+            <form id="form_nav_box">
+            <div id="nav_box">
+                <div id="top_nav_box">
+                    <input type="date" value="2022-01-01" required id="input_date" />
+                    <input type="text" maxlength="15" required id="input_contents" placeholder="내용을 입력해주세요." />
+                    <input type="number" maxlength="15" required  id="input_price" placeholder="가격" />
+                    <!-- <input type="color" required id="input_tag_color" /> -->
+                    <img src="img/up_arrow.png" id="up_arrow" />
+                </div>
+                <div id="bot_nav_box">
+                    <input type="checkbox" name="income" id="income" />
+                    <label for="income">수입</label>
+                <input type="checkbox" name="expense" id="expense" />
+                    <label for="expense">지출</label>
+                </div>
+                <button type="submit" id="submit_btn">제출</button>
+            </div>
+        </form>
+        <div id="nav_box_closed" style="display: none;" class="flex_center">
+            <span>작성 하기</span>
+        </div>
+        <div id="main_container" class="box">
+        </div>
+
+            <div id="footer_box" class="flex_center">
+                <div id="income_box" class="box flex_center">
+                    <span id="income">수입</span>
+                    <span id="income_index">0</span>
+                </div>
+
+                <div id="blank_box">
+                </div>
+                <div id="expense_box" class="box flex_center">
+                    <span id="expense">지출</span>
+                    <span id="expense_index">0</span>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="database.js"></script>
+    <script type="module" src="APIkey.js"></script>
+    <script src="design.js"></script>
+    <script type="module" src="mainbox.js"></script>
+    <script src="footer.js"></script>
+    <script src="APIkey.js"></script>
+</body>
+</html>
